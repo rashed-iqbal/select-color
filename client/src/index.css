@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.trrr-80{
+    --tw-translate-x: -79%
+}
