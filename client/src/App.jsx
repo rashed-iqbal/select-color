@@ -62,7 +62,7 @@ class App extends Component {
 
 
     if(this.state.colorStyle === 'flat'){
-      fetch(`${window.location.href}create`,{
+      fetch(`/create`,{
         method:'POST',
         headers:{
           "Content-Type":"text/html"
@@ -103,7 +103,7 @@ class App extends Component {
       .catch(e=>{console.log(e)})
     } else {
 
-      fetch(`${window.location.href}create`,{
+      fetch(`/create`,{
         method:'POST',
         headers:{
           "Content-Type":"text/html"
@@ -150,7 +150,7 @@ class App extends Component {
 
 downloadFile = async()=>{
 
-  fetch(`${window.location.href}download/${this.state.fileId}`)
+  fetch(`/download/${this.state.fileId}`)
         .then( res => res.blob() )
         .then( blob => {
           var url = window.URL.createObjectURL(blob);
